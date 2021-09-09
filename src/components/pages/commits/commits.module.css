@@ -3,22 +3,22 @@
   background: #eff2f6;
 }
 
-.commit-wrapper {
+.commitwrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
 }
 
-.commit-viewer {
+.commitviewer {
   color-adjust: #18214d;
   font-size: 1.75rem;
   margin-right: 1rem;
 }
-.search-commit{
+.searchcommit{
   margin-left: .7rem;
 }
-.commit-search-bar{
+.commitsearchbar{
   background: #dfe4ea;
   display: flex;
   align-items: center;
@@ -26,10 +26,10 @@
   border-radius: 5px;
   width: 40%;
 }
-.commit-search-icon{
+.commitsearchicon{
   font-size: 1.4rem;
 }
-.commit-wrapper input {
+.commitsearchbar input {
   border: none;
   outline: 0;
   background: #dfe4ea;
@@ -38,10 +38,22 @@
   margin-left: 0.4rem;
   cursor: pointer;
 }
-.commit-feather{
+.commitbtn{
+  padding: 0.95rem 0.8rem;
+  background: #f3663f;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 250px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.commitfeather{
   color: #18214d;
 }
-.commit-repo-name{
+.commitreponame{
   margin-top: 1.2rem;
   font-size: 1.4rem;
   display: flex;
@@ -50,16 +62,22 @@
   color: #18214D;
   font-weight: 400;
 }
-.commit-list{
+.commitlist{
   text-align: center;
   margin-top: 1rem;
 }
 
 @media screen and (max-width: 768px) {
-  .commit-wrapper{
+  .commitwrapper{
     flex-direction: column;
   }
-  .commit-search-bar, .search-commit{
+  .commitsearchbar, .searchcommit{
     display: none;
+  }
+  
+}
+@media screen and (max-width: 830px) {
+  .commitsearchbar input {
+    font-size: .9rem;
   }
 }

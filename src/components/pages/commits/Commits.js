@@ -1,27 +1,39 @@
 import React from "react";
 import { MdSearch } from "react-icons/md";
 import { GiFeather } from "react-icons/gi";
-import "./commits.css";
+import {
+  commit,
+  commitwrapper,
+  commitviewer,
+  commitsearchbar,
+  commitsearchicon,
+  searchcommit,
+  commitbtn,
+  commitfeather,
+  commitreponame,
+  selectedrepo,
+  commitlist
+} from "./commits.module.css";
 
 const Commits = () => {
   return (
-    <div className="commit">
-      <div className="commit-wrapper">
-        <span className="commit-viewer">CommitViewer</span>
-        <div className="commit-search-bar">
-          <MdSearch className="commit-search-icon" />
+    <div className={commit}>
+      <div className={commitwrapper}>
+        <span className={commitviewer}>CommitViewer</span>
+        <div className={commitsearchbar}>
+          <MdSearch className={commitsearchicon} />
           <input type="search" placeholder="E.g Facebook/react" />
         </div>
-        <span className="search-commit">
-          <button className="commit-btn">
-            See Commits <GiFeather className="commit-feather" />{" "}
+        <span className={searchcommit}>
+          <button className={commitbtn}>
+            See Commits <GiFeather className={commitfeather} />{" "}
           </button>
         </span>
       </div>
-      <div className="commit-repo-name">
-        <span className="selected-repo">microsoft/vscode</span>
+      <div className={commitreponame}>
+        <span className={selectedrepo}>microsoft/vscode</span>
       </div>
-      <div className="commit-list">Loading...</div>
+      <div className={commitlist}>Loading...</div>
     </div>
   );
 };

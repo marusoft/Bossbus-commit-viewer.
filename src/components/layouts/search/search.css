@@ -119,4 +119,7 @@
   .search-wrapper input {
     width: 200px;
   }
+  .suggested-repo{
+    padding: .8rem 1rem;
+  }
 }
