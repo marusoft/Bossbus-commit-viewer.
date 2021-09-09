@@ -46,3 +46,30 @@
   color: #3E4462;
   font-size: 1.25rem;
 }
+
+@media screen and (max-width: 460px){
+  .header-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .description-title{
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 490px){
+  .description-title{
+    font-size: 2.5rem;
+  }
+  .description-paragraph{
+    font-size: .8rem;
+  }
+}
+@media screen and (max-width: 405px) {
+  .logo-title{
+    /* margin-bottom: 2rem; */
+    /* font-size: 1.1rem; */
+  }
+  
+ 
+}

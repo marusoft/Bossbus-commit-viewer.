@@ -1,5 +1,6 @@
-import React from "react"
+import React from "react";
+import "./notfound.css"
 
-const NotFound = () => <h1>Page Does Not Exist</h1>
+const NotFound = () => <h1 className="error">Page Does Not Exist</h1>
 
 export default NotFound;

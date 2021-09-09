@@ -1,0 +1,43 @@
+.commit {
+  height: 100px;
+  background: #eff2f6;
+}
+
+.commit-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.commit-viewer {
+  color-adjust: #18214d;
+  font-size: 1.75rem;
+  margin-right: 1rem;
+}
+.search-commit{
+  margin-left: .7rem;
+}
+.commit-search-bar{
+  background: #dfe4ea;
+  display: flex;
+  align-items: center;
+  padding: 0.9rem 0.8rem;
+  border-radius: 5px;
+  width: 40%;
+}
+.commit-search-icon{
+  font-size: 1.4rem;
+}
+.commit-wrapper input {
+  border: none;
+  outline: 0;
+  background: #dfe4ea;
+  color: #b1b5c5;
+  font-size: 1.1rem;
+  margin-left: 0.4rem;
+  cursor: pointer;
+}
+.commit-feather{
+  color: #18214d;
+}

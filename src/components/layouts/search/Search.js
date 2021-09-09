@@ -2,6 +2,7 @@ import React from "react";
 import { MdSearch } from "react-icons/md";
 import { GiFeather } from "react-icons/gi";
 import "./search.css";
+import { Link } from "react-router-dom";
 
 const Search = () => {
   return (
@@ -12,9 +13,11 @@ const Search = () => {
           <input type="search" placeholder="E.g Facebook/react" />
         </div>
         <span className="search-commit">
-          <button className="search-commit-btn">
-            See Commits <GiFeather className="feather" />{" "}
-          </button>
+          <Link to="/commits">
+            <button className="search-commit-btn">
+              See Commits <GiFeather className="feather" />{" "}
+            </button>
+          </Link>
         </span>
       </div>
       <div className="repos">
