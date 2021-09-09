@@ -41,3 +41,25 @@
 .commit-feather{
   color: #18214d;
 }
+.commit-repo-name{
+  margin-top: 1.2rem;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #18214D;
+  font-weight: 400;
+}
+.commit-list{
+  text-align: center;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .commit-wrapper{
+    flex-direction: column;
+  }
+  .commit-search-bar, .search-commit{
+    display: none;
+  }
+}

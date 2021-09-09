@@ -18,6 +18,10 @@ const Commits = () => {
           </button>
         </span>
       </div>
+      <div className="commit-repo-name">
+        <span className="selected-repo">microsoft/vscode</span>
+      </div>
+      <div className="commit-list">Loading...</div>
     </div>
   );
 };
