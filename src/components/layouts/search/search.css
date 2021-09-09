@@ -1,0 +1,70 @@
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-wrapper {
+  background: #dfe4ea;
+  display: flex;
+  align-items: center;
+  padding: 0.9rem 0.8rem;
+  border-radius: 5px;
+  width: 40%;
+}
+.search-wrapper input {
+  border: none;
+  outline: 0;
+  background: #dfe4ea;
+  color: #b1b5c5;
+  font-size: 1.1rem;
+  margin-left: 0.4rem;
+}
+.search-icon {
+  font-weight: 400;
+  margin-left: 0.8rem;
+  font-size: 1.1rem;
+  color: #29335c;
+}
+.search-commit {
+  margin-left: 0.5rem;
+}
+.search-commit-btn {
+  padding: 0.95rem 0.8rem;
+  background: #f3663f;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 250px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.feather {
+  color: #18214d;
+  text-align: center;
+}
+.repos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.suggested-repo {
+  margin-top: 1rem;
+  color: #3e4462;
+}
+.search-list {
+  margin-top: 1.5rem;
+  display: flex;
+}
+.search-list-item {
+  margin-left: 1.5rem;
+  list-style-type: none;
+  padding: 0.5rem 1rem;
+  background: #29335c;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin: 0.625rem;
+  font-weight: 500;
+}

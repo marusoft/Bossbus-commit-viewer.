@@ -1,0 +1,48 @@
+.header {
+  margin-top: 1.5rem;
+}
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+.logo-title {
+  color: #18214D;
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+.navigation {
+  color: #18214D;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+.nav-list-item {
+  margin-right: 2rem;
+  list-style-type: none;
+}
+
+.description-container{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+}
+.description{
+ 
+  max-width: 500px;
+  text-align: center;
+  /* padding: 2.5rem 3.5rem; */
+}
+.description-title{
+  font-size: 4.5rem;
+  color: #29335c;
+}
+.description-paragraph{
+  margin-bottom: 1.5rem;
+  color: #3E4462;
+  font-size: 1.25rem;
+}
