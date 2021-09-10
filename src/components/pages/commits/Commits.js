@@ -44,7 +44,22 @@ const Commits = (props) => {
     });
     const dataResult = await data.json();
     console.log(dataResult.items);
-    setCommits(dataResult?.items);
+    setCommits(dataResult?.items?.slice(0, 7)?.map(({author:{
+      avatar_url
+    },commit:{
+      author:{
+        name,
+        date
+      }, message
+    }}) => ({
+      avatar_url, name, message, date
+    })))
+  
+     // {author.avatar_url}
+        // {commit.author.name}
+        // {commit.message}
+        // {commit.author.date}
+
     setLoading(false);
   };
 
@@ -78,11 +93,8 @@ const Commits = (props) => {
       {loading ? (
         <div className={commitlist}>Loading...</div>
       ) : (
-        <div>{JSON.stringify(commits?.slice(0, 5), null, 1)}</div>
-        // {author.avatar_url}
-        // {commit.author.name}
-        // {commit.message}
-        // {commit.author.date}
+        <pre>{JSON.stringify(commits, null, 1)}</pre>
+       
       )}
     </div>
   );
