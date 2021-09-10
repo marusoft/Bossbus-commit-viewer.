@@ -1,10 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { MdSearch } from "react-icons/md";
 import { GiFeather } from "react-icons/gi";
 import "./search.css";
 import { Link } from "react-router-dom";
 
 const Search = () => {
+  const [commits, setCommits] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [search, setSearch] = useState("");
+
+  const Base_Url =
+    "https://api.github.com/search/commits?q=repo:microsoft/vscode author-date:2021-03-01..2021-03-07";
+
+  const headers = {
+    Accept: "application/vnd.github.cloak-preview",
+  };
+
+  useEffect(() => {
+    const getCommits = async () => {
+      setLoading(true);
+      const data = await fetch(Base_Url, {
+        method: "GET",
+        headers: headers,
+      });
+      const dataResult = await data.json();
+      console.log(dataResult);
+      // setCommits(dataResult);
+      setLoading(false);
+    };
+    getCommits();
+  }, []);
+
   return (
     <>
       <div className="search">
