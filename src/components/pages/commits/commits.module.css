@@ -66,6 +66,12 @@
   text-align: center;
   margin-top: 1rem;
 }
+.back{
+  margin-right: 3rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #18214d;
+}
 
 @media screen and (max-width: 768px) {
   .commitwrapper{

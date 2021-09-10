@@ -1,35 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { MdSearch } from "react-icons/md";
 import { GiFeather } from "react-icons/gi";
 import "./search.css";
 import { Link } from "react-router-dom";
 
 const Search = () => {
-  const [commits, setCommits] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [search, setSearch] = useState("");
-
-  const Base_Url =
-    "https://api.github.com/search/commits?q=repo:microsoft/vscode author-date:2021-03-01..2021-03-07";
-
-  const headers = {
-    Accept: "application/vnd.github.cloak-preview",
-  };
-
-  useEffect(() => {
-    const getCommits = async () => {
-      setLoading(true);
-      const data = await fetch(Base_Url, {
-        method: "GET",
-        headers: headers,
-      });
-      const dataResult = await data.json();
-      console.log(dataResult);
-      // setCommits(dataResult);
-      setLoading(false);
-    };
-    getCommits();
-  }, []);
+  
 
   return (
     <>
@@ -39,7 +15,7 @@ const Search = () => {
           <input type="search" placeholder="E.g Facebook/react" />
         </div>
         <span className="search-commit">
-          <Link to="/commits">
+          <Link to="/commits/owner/repo">
             <button className="search-commit-btn">
               See Commits <GiFeather className="feather" />{" "}
             </button>
@@ -49,9 +25,9 @@ const Search = () => {
       <div className="repos">
         <p className="suggested-repo">Or pick one of the suggested repos</p>
         <ul className="search-list">
-          <li className="search-list-item">django/django</li>
-          <li className="search-list-item">microsoft/vscode</li>
-          <li className="search-list-item">jezen/is-thirteen</li>
+          <li className="search-list-item"> <Link className="link" to="/commits/django/django">django/django</Link></li>
+          <li className="search-list-item"> <Link className="link" to="/commits/microsoft/vscode">microsoft/vscode</Link></li>
+          <li className="search-list-item"> <Link className="link" to="/commits/jezen/is-thirteen">jezen/is-thirteen</Link></li>
           <li className="search-list-item">benawad/dogehouse</li>
         </ul>
       </div>

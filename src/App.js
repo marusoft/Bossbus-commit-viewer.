@@ -11,13 +11,16 @@ import NotFound from "./components/pages/NotFound/NotFound";
 import "./App.css";
 
 const App = () => {
+
+ 
+
   return (
     <div className="App">
       <Router>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/home" component={Home} />
-          <Route path="/commits" component={Commits} />
+          <Route path="/commits/:owner/:repo" component={Commits} />
           <Route exact path="/404" component={NotFound} />
           <Redirect to="404" />
         </Switch>

@@ -84,6 +84,10 @@
   font-weight: 500;
   cursor: pointer;
 }
+.link{
+  color: #ffffff;
+  text-decoration: none;
+}
 
 @media screen and (max-width: 802px) {
   .search {
