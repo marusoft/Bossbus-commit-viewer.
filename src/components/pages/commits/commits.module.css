@@ -1,5 +1,5 @@
 .commit {
-  height: 100px;
+  height: 120px;
   background: #eff2f6;
 }
 
@@ -9,7 +9,12 @@
   justify-content: center;
   padding: 2rem;
 }
-
+.back {
+  margin-right: 3rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #18214d;
+}
 .commitviewer {
   color-adjust: #18214d;
   font-size: 1.75rem;
@@ -62,69 +67,55 @@
   color: #18214d;
   font-weight: 400;
 }
-.commitlist {
+.selectedrepo {
+  margin: 10px 50px 20px;
+  color: #18214d;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.commitloading {
   text-align: center;
   margin-top: 1rem;
 }
-.back {
-  margin-right: 3rem;
-  font-size: 2rem;
-  cursor: pointer;
-  color: #18214d;
-}
 
-.commitdata {
-}
-.commitlistdata {
-  /* margin: 0;
-  padding: 0; */
-  list-style: none;
-  padding: 1rem;
-}
-.commitlistitem {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  /* margin: 1.25rem 0rem; */
-}
 .commitlistinfo {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  /* margin-right: 0.625rem; */
+  justify-content: space-evenly;
 }
+.commitimgname {
+  /* margin-left: 2rem; */
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .commitlistimg {
-  margin-bottom: .9rem;
   width: 2.5rem;
   height: 2.5rem;
-  object-fit: contain;
   border-radius: 50%;
-  /* margin-right: 0.625rem; */
+  margin-bottom: 0.7rem;
 }
-.commitlistname {
-  font-size: 1rem;
+.commitname,
+.commitmsg,
+.commitdate {
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
   color: #18214d;
   font-weight: 700;
 }
-.commitmsg {
-  display: flex;
-  align-items: center;
+.commitmsg,
+.commitdate {
   font-size: 0.9rem;
   color: #18214d;
-  margin-left: 2.5rem;
-  width: 500px;
+  font-weight: 500;
 }
-.commitdate {
-  font-size: 0.8rem;
-  color: #18214d;
-  margin-right: 2rem;
+
+.commitmsg {
+  width: 600px;
 }
-.msg{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 1.5rem;
-}
+
 @media screen and (max-width: 768px) {
   .commitwrapper {
     flex-direction: column;
@@ -133,9 +124,21 @@
   .searchcommit {
     display: none;
   }
+  .commit {
+    width: 100%;
+  }
+  .commitlistinfo{
+    display: flex;
+    flex-direction: column;
+  }
 }
 @media screen and (max-width: 830px) {
   .commitsearchbar input {
     font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .commitmsg {
+    width: 200px;
   }
 }

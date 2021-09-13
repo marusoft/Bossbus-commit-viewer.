@@ -12,17 +12,18 @@ import {
   commitfeather,
   commitreponame,
   selectedrepo,
-  commitlist,
+  commitloading,
   back,
   commitdata,
   commitlistdata,
   commitlistitem,
   commitlistinfo,
   commitlistimg,
-  commitlistname,
+  commitimgname,
+  commitname,
   commitmsg,
   commitdate,
-  msg
+  msg,
 } from "./commits.module.css";
 import { Link } from "react-router-dom";
 
@@ -72,12 +73,6 @@ const Commits = (props) => {
         })
       )
     );
-
-    // {author.avatar_url}
-    // {commit.author.name}
-    // {commit.message}
-    // {commit.author.date}
-
     setLoading(false);
   };
 
@@ -109,30 +104,27 @@ const Commits = (props) => {
         </span>
       </div>
       {loading ? (
-        <div className={commitlist}>Loading...</div>
+        <div className={commitloading}>Loading...</div>
       ) : (
         // <pre>{JSON.stringify(commits, null, 1)}</pre>
 
         commits.map((item) => (
           <div className={commitdata}>
-            <ul className={commitlistdata}>
+            <ul key={item.id} className={commitlistdata}>
               <li className={commitlistitem}>
-                <div className={msg}>
-                  <div className={commitlistinfo}>
+                <div className={commitlistinfo}>
+                  <div className={commitimgname}>
                     <img
                       src={item.avatar_url}
                       alt=""
                       className={commitlistimg}
                     />
-                    <span className={commitlistname}>{item.name}</span>
+                    <span className={commitname}>{item.name}</span>
                   </div>
-                  <div className={commitmsg}>
-                    {" "}
-                    <span>{item.message}</span>
-                  </div>
+                  <p className={commitmsg}>{item.message}</p>
+                  <span className={commitdate}>{item.date}</span>
                 </div>
-
-                <span className={commitdate}>{item.date}</span>
+               
               </li>
             </ul>
           </div>
