@@ -58,7 +58,7 @@ const Commits = (props) => {
     const dataResult = await data.json();
     console.log(dataResult.items);
     setCommits(
-      dataResult?.items?.slice(0, 6)?.map(
+      dataResult.items.slice(0, 6).map(
         ({
           author: { avatar_url },
           commit: {

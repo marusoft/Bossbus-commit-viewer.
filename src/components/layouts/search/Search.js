@@ -5,8 +5,6 @@ import "./search.css";
 import { Link } from "react-router-dom";
 
 const Search = () => {
-  
-
   return (
     <>
       <div className="search">
@@ -25,10 +23,30 @@ const Search = () => {
       <div className="repos">
         <p className="suggested-repo">Or pick one of the suggested repos</p>
         <ul className="search-list">
-          <li className="search-list-item"> <Link className="link" to="/commits/django/django">django/django</Link></li>
-          <li className="search-list-item"> <Link className="link" to="/commits/microsoft/vscode">microsoft/vscode</Link></li>
-          <li className="search-list-item"> <Link className="link" to="/commits/vuejs/vue">vuejs/vue</Link></li>
-          <li className="search-list-item"> <Link className="link" to="/commits/freecodecamp/freecodecamp">freecodecamp/freecodecamp</Link></li>
+          <li className="search-list-item">
+            {" "}
+            <Link className="link" to="/commits/django/django">
+              django/django
+            </Link>
+          </li>
+          <li className="search-list-item">
+            {" "}
+            <Link className="link" to="/commits/microsoft/vscode">
+              microsoft/vscode
+            </Link>
+          </li>
+          <li className="search-list-item">
+            {" "}
+            <Link className="link" to="/commits/vuejs/vue">
+              vuejs/vue
+            </Link>
+          </li>
+          <li className="search-list-item">
+            {" "}
+            <Link className="link" to="/commits/freecodecamp/freecodecamp">
+              freecodecamp/freecodecamp
+            </Link>
+          </li>
         </ul>
       </div>
     </>
