@@ -84,7 +84,7 @@
   font-weight: 500;
   cursor: pointer;
 }
-.link{
+.link {
   color: #ffffff;
   text-decoration: none;
 }
@@ -100,10 +100,11 @@
   }
   .search-list {
     flex-direction: column;
+    flex-wrap: wrap;
   }
   .search-wrapper input {
     width: 300px;
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
   .search-icon {
     font-size: 1.5rem;
@@ -123,7 +124,7 @@
   .search-wrapper input {
     width: 200px;
   }
-  .suggested-repo{
-    padding: .8rem 1rem;
+  .suggested-repo {
+    padding: 0.8rem 1rem;
   }
 }

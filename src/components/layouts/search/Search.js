@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Search = () => {
   return (
-    <>
+    <div>
       <div className="search">
         <div className="search-wrapper">
           <MdSearch className="search-icon" />
@@ -49,7 +49,7 @@ const Search = () => {
           </li>
         </ul>
       </div>
-    </>
+    </div>
   );
 };
 

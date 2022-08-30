@@ -8,12 +8,12 @@
   cursor: pointer;
 }
 .logo-title {
-  color: #18214D;
+  color: #18214d;
   font-weight: 700;
   font-size: 1.75rem;
 }
 .navigation {
-  color: #18214D;
+  color: #18214d;
   font-weight: 400;
   font-size: 1.2rem;
 }
@@ -26,43 +26,43 @@
   list-style-type: none;
 }
 
-.description-container{
+.description-container {
   display: flex;
   justify-content: space-evenly;
   margin-top: 3rem;
 }
-.description{
+.description {
   max-width: 500px;
   text-align: center;
 }
-.description-title{
+.description-title {
   font-size: 4.5rem;
   color: #29335c;
 }
-.description-paragraph{
+.description-paragraph {
   margin-bottom: 1.5rem;
-  color: #3E4462;
+  color: #3e4462;
   font-size: 1.25rem;
 }
 
-@media screen and (max-width: 520px){
-  .header-wrapper{
+@media screen and (max-width: 520px) {
+  .header-wrapper {
     display: flex;
     flex-wrap: wrap;
   }
-  .description-title{
+  .description-title {
     font-size: 1.5rem;
   }
-  .description-paragraph{
+  .description-paragraph {
     font-size: 1rem;
     padding: 1.5rem;
   }
-  .navigation{
+  .navigation {
     padding: 1.3rem;
   }
 }
-@media screen and (max-width: 410px){
-  .header-wrapper{
+@media screen and (max-width: 410px) {
+  .header-wrapper {
     display: flex;
     flex-wrap: wrap;
   }
